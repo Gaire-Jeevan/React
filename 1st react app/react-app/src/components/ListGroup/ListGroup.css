@@ -1,0 +1,14 @@
+/* Custom CSS for removing Bootstrap list-group styling */
+
+body{
+    background: rgb(196, 28, 28);
+}
+.list-group {
+   list-style: none;
+  }
+
+  .list-group-item {
+    background: rgb(196, 28, 28);
+  }
+  
+  
