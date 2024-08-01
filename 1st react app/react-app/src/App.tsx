@@ -1,5 +1,6 @@
 import { BsFillCalendar2Fill } from "react-icons/bs";
 import ListGroup from './components/ListGroup/ListGroup';
+import Like from './components/Like'
 import './App.css'
 // import { useState } from 'react';
 // import Alert from './components/Alert';
@@ -15,9 +16,14 @@ function App() {
   // const [alertVisible, setAlertVisibility] = useState(false);
   
   return (
+    // Like
     <div>
-    <BsFillCalendar2Fill color="red" size="140"/>
+      <Like onClick={() => console.log('clicked')}></Like>
     </div>
+
+    // <div>
+    // <BsFillCalendar2Fill color="red" size="140"/>
+    // </div>
 
     // <div>
     //   <ListGroup
