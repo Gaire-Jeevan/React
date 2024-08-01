@@ -1,3 +1,4 @@
+import { BsFillCalendar2Fill } from "react-icons/bs";
 import ListGroup from './components/ListGroup/ListGroup';
 import './App.css'
 // import { useState } from 'react';
@@ -15,12 +16,16 @@ function App() {
   
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectedItem}
-      />
+    <BsFillCalendar2Fill color="red" size="140"/>
     </div>
+
+    // <div>
+    //   <ListGroup
+    //     items={items}
+    //     heading="Cities"
+    //     onSelectItem={handleSelectedItem}
+    //   />
+    // </div>
 
     // <div>
     //   <Alert>

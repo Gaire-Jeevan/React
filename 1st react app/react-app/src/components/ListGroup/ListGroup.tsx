@@ -39,7 +39,7 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   return (
     <>
       <h1>{heading}</h1>
-      {items.length === 0 ? <p>No item found</p> : null}
+      {/* {items.length === 0 ? <p>No item found</p> : null} */}
       {items.length === 0 && <p>No item found</p>}
       <List>
         {items.map((item, index) => (
