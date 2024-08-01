@@ -1,24 +1,15 @@
 import './App.css';
 import { useState } from 'react';
+import Message from './components/Message';
 
 function App() {
-  // const [firstName, setFirstName] = useState('');
-  // const [lastName, setLastName] = useState('');
-  const [person, setPerson] = useState({
-    firstName: '',
-    lastName: '',
 
-    // avoid this
-    contact: {
-      address:{
-        street: '',
-      }
-    }
-  });
+  return <div> 
+    <Message />
+    <Message />
+    <Message />
 
-  const [isLoading, setLoading] = useState(false);
-
-  return <div></div>;
+  </div>;
 }
 
 export default App;
