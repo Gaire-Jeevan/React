@@ -1,7 +1,7 @@
 /* Custom CSS for removing Bootstrap list-group styling */
 
 
-.listGroup {
+.list-group {
   list-style: none;
   padding: 2;
 }
