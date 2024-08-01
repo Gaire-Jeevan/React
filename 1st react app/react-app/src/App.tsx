@@ -1,51 +1,24 @@
-import { BsFillCalendar2Fill } from "react-icons/bs";
-import ListGroup from './components/ListGroup/ListGroup';
-import Like from './components/Like'
-import './App.css'
-// import { useState } from 'react';
-// import Alert from './components/Alert';
-// import Button from './components/Button';
-
+import './App.css';
+import { useState } from 'react';
 
 function App() {
-  let items = ['New York', 'San Francisco', 'London', 'Kathmandu', 'Beiging'];
+  // const [firstName, setFirstName] = useState('');
+  // const [lastName, setLastName] = useState('');
+  const [person, setPerson] = useState({
+    firstName: '',
+    lastName: '',
 
-  const handleSelectedItem = (item: string) => {
-    console.log(item);
-  }
-  // const [alertVisible, setAlertVisibility] = useState(false);
-  
-  return (
-    // Like
-    <div>
-      <Like onClick={() => console.log('clicked')}></Like>
-    </div>
+    // avoid this
+    contact: {
+      address:{
+        street: '',
+      }
+    }
+  });
 
-    // <div>
-    // <BsFillCalendar2Fill color="red" size="140"/>
-    // </div>
+  const [isLoading, setLoading] = useState(false);
 
-    // <div>
-    //   <ListGroup
-    //     items={items}
-    //     heading="Cities"
-    //     onSelectItem={handleSelectedItem}
-    //   />
-    // </div>
-
-    // <div>
-    //   <Alert>
-    //   Hello <span>World!</span>
-    //     </Alert>
-    // </div>
-
-    // <div>
-    //   {alertVisible && <Alert onClose={() => setAlertVisibility(false)}>My alert</Alert>}
-    //   <Button color="danger" onClick={() => setAlertVisibility(true)}>
-    //     My Button
-    //   </Button>
-    // </div>
-  );
+  return <div></div>;
 }
 
 export default App;
