@@ -3,13 +3,24 @@ import { useState } from 'react';
 import Message from './components/Message';
 
 function App() {
+  const [drink, setDrink] = useState({
+    title: 'Americano',
+    price: 5,
+  });
 
-  return <div> 
-    <Message />
-    <Message />
-    <Message />
+const handleClick = () => {
+  // const newDrink = {
+  //   title: drink.title,
+  //   price: drink.price++,
+  // }
+  setDrink({...drink, price:6});
+}
 
-  </div>;
+  return (
+    <div>{drink.price}
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
 }
 
 export default App;
