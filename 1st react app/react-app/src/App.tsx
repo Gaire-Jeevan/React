@@ -3,24 +3,20 @@ import { useState } from 'react';
 import Message from './components/Message';
 
 function App() {
-  const [customer, setCustomer] = useState({
-    name: 'John',
-    address: {
-      city: 'San Francisco',
-      zipcode: 94111,      
-    },
-  });
+  const [tags, setTags] = useState(['happy', 'cheerful']);
 
-const handleClick = () => {
-  setCustomer({...customer, address: {
-    ...customer.address, zipcode: 94112
-  }})
-}
+  const handleClick = () => {
+    // add
+    setTags([...tags, 'exiciting'])
 
-  return (
-    <div>
-    </div>
-  );
+    // remove
+    setTags(tags.filter(tag => tag != 'happy'))
+
+    // update
+    setTags(tags.map(tag => tag === 'happy' ? 'happiness' : tag))
+  };
+
+  return <div></div>;
 }
 
 export default App;
