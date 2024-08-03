@@ -19,6 +19,7 @@ function App() {
 
   return <div>
     {bugs.map(bug => <p key={bug.id}>{bug.title} {bug.fixed ? 'Fixed' : 'New'}</p>)}
+    <button onClick={handleClick}>Click Me</button>
   </div>;
 }
 
