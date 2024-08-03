@@ -1,75 +1,19 @@
 import { useState } from 'react';
-import NavBar from './components/NavBar';
-import Cart from './components/Cart';
+import ExpandableText from './components/ExpandableText';
+
 
 function App() {
-  // exercise 1
-
-  // const [game, setGame] = useState({
-  //   id: 1,
-  //   player: {
-  //     name: "John",
-  //   }
-  // })
-
-  // exercise 2
-
-  // const [pizza, setPizza] = useState({
-  //   name: 'SPicy Pepperoni',
-  //   toppings: ['Mushroom'],
-  // });
-
-  // exercise 3
-
-  const [cart, setCart] = useState({
-    discount: 0.1,
-    items: [
-      { id: 1, title: 'Product 1', quantity: 1 },
-      { id: 2, title: 'Product 2', quantity: 1 },
-    ],
-  });
+  
 
   const handleClick = () => {
-    // exercise 1
-
-    // setGame({...game, player: { ...game.player, name: "BOB"}})
-
-    // // exercise 2
-    // setPizza({...pizza, toppings :[...pizza.toppings, 'Cheese']})
-
-    // exercise 3
-
-    setCart({
-      ...cart,
-      items: cart.items.map(item =>
-        item.id === 1 ? { ...item, quantity: item.quantity + 1 } : item
-      ),
-    });
+    
   };
 
   return (
-    // exercise 1
-
-    // <div>
-    //   {game.player.name}
-    //   <button onClick={handleClick}>Change Name</button>
-    // </div>
-
-    // exercise 2
-    // <div>
-    //   {pizza.toppings}
-    //   <button onClick={handleClick}>Click Me</button>
-    // </div>
-
-    // exercise 3
     <div>
-      {cart.items.map(item => (
-        <p key={item.id}>
-          {item.title}: {item.quantity}
-        </p>
-      ))}
-      
-      <button onClick={handleClick}>Click Me</button>
+      <ExpandableText maxChars={10}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa ea hic officia, quisquam maxime quibusdam nemo pariatur aliquid quam quaerat impedit magnam vitae eos dolorem exercitationem cumque atque sit voluptates. Maxime, reprehenderit amet pariatur sint corrupti nostrum repellat possimus voluptatem magni magnam quibusdam et aperiam totam ipsum nihil accusamus temporibus distinctio, natus optio ex quasi obcaecati? Sapiente reprehenderit debitis ullam facere quam voluptatem beatae nihil mollitia sit consectetur iusto, minus molestias hic fugit esse veniam provident facilis. Veniam commodi ratione veritatis aperiam? Nemo officiis nisi, illo nostrum, iusto dicta esse error distinctio nulla aliquam, in praesentium. Magni, corporis obcaecati.
+      </ExpandableText>
     </div>
   );
 }
